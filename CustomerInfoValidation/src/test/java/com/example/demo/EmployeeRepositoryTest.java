@@ -10,7 +10,7 @@ import org.springframework.util.Assert;
 import java.util.Iterator;
 
 @SpringBootTest
-class EmployeeRepositoryApplicationTests {
+class EmployeeRepositoryTest {
 
 	@Autowired
 	EmployeeRepository employeeRepository;

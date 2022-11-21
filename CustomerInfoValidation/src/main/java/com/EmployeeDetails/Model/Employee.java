@@ -22,23 +22,23 @@ public class Employee
 	private int id;  
 
 	@Column  
-	private String name; 
+	public String name; 
 
 	@DOB
 	@Column
-	private Date dob;
+	public Date dob;
 	
 	@SSN
 	@Column  
-	private String SSN; 
+	public String SSN; 
 	
 	@Mobile
 	@Column  
-	private String mobile; 
+	public String mobile; 
 	
 	@Email
 	@Column
-	private String email;  
+	public String email;  
 	public int getId()   
 	{  
 		return id;  

@@ -17,22 +17,22 @@ public class EmployeeController
 @Autowired  
 EmployeeService employeeService;  
 @GetMapping("/employee")  
-private List<Employee> getAllEmployee()   
+public  List<Employee> getAllEmployee()   
 {  
 return employeeService.getAllEmployee();  
 }  
 @GetMapping("/employee/{id}")  
-private Employee getEmployee(@PathVariable("id") int id)   
+public  Employee getEmployee(@PathVariable("id") int id)   
 {  
 return employeeService.getEmployeeById(id);  
 }  
 @DeleteMapping("/employee/{id}")  
-private void deleteEmployee(@PathVariable("id") int id)   
+public  void deleteEmployee(@PathVariable("id") int id)   
 {  
 	employeeService.delete(id);  
 }  
 @PostMapping("/employee")  
-private int saveStudent(@RequestBody Employee employee)   
+public  int saveStudent(@RequestBody Employee employee)   
 {  
 	Employee emp= employeeService.saveOrUpdate(employee);  
 	return emp.getId();  

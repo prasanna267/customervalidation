@@ -10,17 +10,17 @@ import org.springframework.util.Assert;
 import java.util.Iterator;
 
 @SpringBootTest
-class CustomerInfoValidationApplicationTests {
+class EmployeeRepositoryApplicationTests {
 
 	@Autowired
-	EmployeeRepository employeeController;
+	EmployeeRepository employeeRepository;
 
 
 	@Test
 	public void testGetAllEmployees() {
 
 
-		Iterable<Employee> emp1 = employeeController.findAll();
+		Iterable<Employee> emp1 = employeeRepository.findAll();
 		Iterator<Employee> newEmpList = emp1.iterator();
 		while (newEmpList.hasNext()) {
 
@@ -39,7 +39,7 @@ class CustomerInfoValidationApplicationTests {
 		employee.setId(100);
 		employee.setName("Test");
 
-		employeeController.save(employee);
+		employeeRepository.save(employee);
 
 	}
 
